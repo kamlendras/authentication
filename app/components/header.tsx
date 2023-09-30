@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { signIn, signOut, useSession } from "next-auth/react"
-import styles from "./header.module.css"
+import styles from "../styles/header.module.css"
 
 // The approach used in this component shows how to build a sign in and sign out
 // component that works on pages which support both client and server side
@@ -67,20 +67,16 @@ export default function Header() {
       <nav>
         <ul className={styles.navItems}>
           <li className={styles.navItem}>
-            <Link href="/">Home</Link>
+            <Link href="/">/</Link>
           </li>
-          <li className={styles.navItem}>
-            <Link href="/client">Client</Link>
-          </li>
+        
           <li className={styles.navItem}>
             <Link href="/server">Server</Link>
           </li>
           <li className={styles.navItem}>
             <Link href="/protected">Protected</Link>
           </li>
-          <li className={styles.navItem}>
-            <Link href="/api-example">API</Link>
-          </li>
+      
           <li className={styles.navItem}>
             <Link href="/admin">Admin</Link>
           </li>
